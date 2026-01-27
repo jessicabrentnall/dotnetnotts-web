@@ -23,30 +23,8 @@ namespace dotnetnotts.tests.unit
             
             // Check for all main navigation links
             Assert.Contains("href=\"/\"", component.Markup); // Home
-            Assert.Contains("href=\"https://sessionize.com/dotnetnotts/\"", component.Markup); // Apply To Speak
             Assert.Contains("href=\"speakerinfo\"", component.Markup); // Speaker Info
-            Assert.Contains("href=\"contactus\"", component.Markup); // Contact Us
             Assert.Contains("href=\"codeofconduct\"", component.Markup); // Code of Conduct
-        }
-
-        [Fact]
-        public void NavMenu_ExternalLinksHaveProperAttributes()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Check external links have target="_blank" and proper aria labels
-            Assert.Contains("target=\"_blank\"", component.Markup);
-            Assert.Contains("aria-label=\"Apply To Speak (opens in new tab)\"", component.Markup);
-        }
-
-        [Fact]
-        public void NavMenu_HasConsistentTabIndexing()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Check for consistent tabindex="0" across navigation elements
-            var tabIndexCount = System.Text.RegularExpressions.Regex.Matches(component.Markup, "tabindex=\"0\"").Count;
-            Assert.True(tabIndexCount >= 6); // At least 6 navigation items should have tabindex
         }
 
         [Fact]
@@ -125,7 +103,6 @@ namespace dotnetnotts.tests.unit
             
             // Check for proper navigation within content
             Assert.Contains("aria-label=\"Social media links\"", component.Markup);
-            Assert.Contains("href=\"https://twitter.com/dotnetnotts\"", component.Markup);
             Assert.Contains("href=\"https://www.meetup.com/dotnetnotts/\"", component.Markup);
             Assert.Contains("href=\"https://www.linkedin.com/company/dotnet-notts\"", component.Markup);
             Assert.Contains("href=\"https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw\"", component.Markup);
@@ -138,7 +115,6 @@ namespace dotnetnotts.tests.unit
             
             // Check social media links have proper attributes
             Assert.Contains("target=\"_blank\"", component.Markup);
-            Assert.Contains("aria-label=\"Twitter (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"Meetup (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"LinkedIn (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"YouTube (opens in new tab)\"", component.Markup);

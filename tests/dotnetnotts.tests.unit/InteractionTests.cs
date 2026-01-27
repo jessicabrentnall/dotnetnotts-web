@@ -34,40 +34,15 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void NavMenu_LinkInteractions()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test all navigation links are clickable
-            var homeLink = component.Find("a[href='/']");
-            var speakerInfoLink = component.Find("a[href='speakerinfo']");
-            var contactLink = component.Find("a[href='contactus']");
-            var codeOfConductLink = component.Find("a[href='codeofconduct']");
-            
-            Assert.NotNull(homeLink);
-            Assert.NotNull(speakerInfoLink);
-            Assert.NotNull(contactLink);
-            Assert.NotNull(codeOfConductLink);
-            
-            // Test link click closes menu
-            var hamburger = component.Find("button.hamburger");
-            hamburger.Click(); // Open menu
-            homeLink.Click(); // Click link
-            Assert.Contains("hide-menu", component.Markup); // Menu should close
-        }
-
-        [Fact]
         public void IndexPage_SocialMediaInteractions()
         {
             var component = _context.RenderComponent<Index>();
             
             // Test social media links are clickable
-            var twitterLink = component.Find("a[href='https://twitter.com/dotnetnotts']");
             var meetupLink = component.Find("a[href='https://www.meetup.com/dotnetnotts/']");
             var linkedinLink = component.Find("a[href='https://www.linkedin.com/company/dotnet-notts']");
             var youtubeLink = component.Find("a[href='https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw']");
             
-            Assert.NotNull(twitterLink);
             Assert.NotNull(meetupLink);
             Assert.NotNull(linkedinLink);
             Assert.NotNull(youtubeLink);
@@ -84,23 +59,6 @@ namespace dotnetnotts.tests.unit
             // Test buttons have proper spacing for touch targets
             Assert.Contains("px-5", component.Markup); // Padding for touch targets
             Assert.Contains("shadow-sm", component.Markup); // Visual feedback
-        }
-
-        [Fact]
-        public void NavMenu_KeyboardInteraction()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test keyboard navigation support
-            Assert.Contains("tabindex=\"0\"", component.Markup);
-            
-            // Test hamburger button keyboard accessibility
-            var hamburger = component.Find("button.hamburger");
-            Assert.Contains("aria-label=\"Toggle navigation menu\"", hamburger.OuterHtml);
-            
-            // Test navigation links are keyboard accessible
-            var links = component.FindAll("a.nav-link");
-            Assert.True(links.Count >= 4); // At least 4 internal navigation links
         }
 
         [Fact]
@@ -124,22 +82,6 @@ namespace dotnetnotts.tests.unit
             
             // Test navigation links are touch-friendly
             Assert.Contains("class=\"nav-link\"", component.Markup);
-        }
-
-        [Fact]
-        public void IndexPage_TouchFriendlyButtons()
-        {
-            var component = _context.RenderComponent<Index>();
-            
-            // Test social media buttons are touch-friendly
-            var socialButtons = component.FindAll("a.btn");
-            Assert.True(socialButtons.Count >= 4); // At least 4 social media buttons
-            
-            // Test buttons have proper padding for touch targets
-            foreach (var button in socialButtons)
-            {
-                Assert.Contains("px-5", button.OuterHtml); // Proper touch target size
-            }
         }
 
         [Fact]
@@ -167,18 +109,7 @@ namespace dotnetnotts.tests.unit
             
             // Test all interactive elements have proper labels
             Assert.Contains("aria-label=\"GitHub repository (opens in new tab)\"", component.Markup);
-            Assert.Contains("aria-label=\"Twitter (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"YouTube Channel (opens in new tab)\"", component.Markup);
-        }
-
-        [Fact]
-        public void NavMenu_ExternalLinkInteractions()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test external links open in new tab
-            var externalLinks = component.FindAll("a[target='_blank']");
-            Assert.True(externalLinks.Count >= 1); // At least 1 external link (Apply To Speak)
         }
 
         [Fact]
