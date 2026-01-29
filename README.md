@@ -2,9 +2,7 @@
 
 [![Build and to Azure Web App - dotnetnotts](https://github.com/dotnetnotts/dotnetnotts-web/actions/workflows/main_dotnetnotts.yml/badge.svg?branch=main)](https://github.com/dotnetnotts/dotnetnotts-web/actions/workflows/main_dotnetnotts.yml)
 
-The new .NET Notts website written in Blazor. You can find the site at it's temporary domain name here;
-
-https://dotnetnotts.azurewebsites.net/
+The [.NET Notts website](https://www.dotnetnotts.co.uk/) written in Blazor.
 
 # Contents
 
@@ -16,63 +14,37 @@ https://dotnetnotts.azurewebsites.net/
 - [Build Tool](#build-tool)
 - [Branding](#branding)
 
-<br/>
-
+---
 # Contributing
 
 Before contributing to this repository please follow the following steps. Also please check [the contribution guidelines.](.github/contributing.md)
 
-<br/>
-
 ## Step 1 - Check for any issue
 
 Before making any changes, check to see if there are any issues describing the feature you want to add or the bug you want to fix.
-
-
-### If there isn't an issue for the change you want to make, raise one
-
 In the case that an issue doesn't exist for the change you want to make, raise one and fill in all the details asked for in the template.
-
-<br/>
 
 ## Step 2 - Comment on the issue you want to pick up
 
 When you have found an issue, comment on it requesting that you want to pick up the issue. If you have raised the issue, you can comment straight away saying you are going to resolve the issue yourself.
-
 The reason for this is we have many people wanting to make certain changes, and we are running a first-come rota on who gets the issue. The first person to ask on an issue gets to resolve it.
-
-<br/>
 
 ## Step 3 - One of the owners will comment and set to `in-progress`
 
 If you can pick up an issue, the owners of the repository will comment saying so and set a `in-progress` label on the issue.
 
-<br/>
-
 ## Extra Notes
----
 
-## First come first served
+### First come first served
 
 We are managing the demand to contribute by allowing the first person to request addressing a change on an issue to be the person whose PR we will review.
-
 Some issues can have multiple contributions, so please do ask on the issue if you can still contribute.
 
-<br/>
-
-## Please only pick up one issue at a time, and a maximum of two issues over October
-
-There are many small changes available in the issues. This is to ensure there are plenty of issues available for different first time contributors to pick up.
-
-Please don't address more than two issues in this repository. 
-
-<br/>
-
-## Please be patient
+### Please be patient
 
 The maintainers look after this repository in their free time outside of full time jobs. They also have other priorities and commitments. We will try to address issues and pull requests in a timely manner, but sometimes it will take a few days. Please be patient.
 
-<br/>
+---
 
 # Local Development 
 
@@ -155,6 +127,3 @@ Use the CSS custom properties (variables) instead of hardcoded hex values:
 
 ### Font
 Font: Open Sans (fallback to sans-serif)
-
-<br/>
-
