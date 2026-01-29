@@ -1,6 +1,6 @@
 # .NET Notts Website
 
-![Build and deploy ASP.Net Core app to Azure Web App - dotnetnotts](https://github.com/dotnetnotts/dotnetnotts-web/workflows/Build%20and%20deploy%20ASP.Net%20Core%20app%20to%20Azure%20Web%20App%20-%20dotnetnotts/badge.svg)
+[![Build and to Azure Web App - dotnetnotts](https://github.com/dotnetnotts/dotnetnotts-web/actions/workflows/main_dotnetnotts.yml/badge.svg?branch=main)](https://github.com/dotnetnotts/dotnetnotts-web/actions/workflows/main_dotnetnotts.yml)
 
 The new .NET Notts website written in Blazor. You can find the site at it's temporary domain name here;
 
@@ -92,19 +92,6 @@ If you wish to test code coverage, you can also run `dotnet test --collect:"XPla
 Existing test suites can be found under the `./tests` folder. As of writing, the tests consist of only unit-level / component-level tests written using [bUnit](https://github.com/egil/bUnit).
 
 If you are editing or adding new components, please consider adding or updating tests to reflect your changes!
-
-<br/>
-
-# Build Tool
-
-GitHub Actions is set up to build and run tests from Pull Requests so that we can ensure the project builds and tests pass from any changes made within branches before they are merged in. 
-
-GitHub Actions is also used to deploy on merge into master.
-
-![Build and deploy ASP.Net Core app to Azure Web App - dotnetnotts](https://github.com/dotnetnotts/dotnetnotts-web/workflows/Build%20and%20deploy%20ASP.Net%20Core%20app%20to%20Azure%20Web%20App%20-%20dotnetnotts/badge.svg)
-
-
-<br/>
 
 # Branding
 
